@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 185 40% 92%;
+    --foreground: 195 45% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 195 45% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 45% 25%;
+
+    --primary: 185 45% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 185 30% 94%;
+    --secondary-foreground: 195 45% 25%;
+
+    --muted: 185 25% 90%;
+    --muted-foreground: 195 20% 50%;
+
+    --accent: 155 50% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 185 25% 85%;
+    --input: 185 25% 85%;
+    --ring: 185 45% 35%;
+
+    --radius: 1rem;
+
+    /* Quiz specific tokens */
+    --quiz-gradient-start: 185 45% 85%;
+    --quiz-gradient-end: 175 40% 88%;
+    --quiz-card-shadow: 0 8px 32px -8px hsl(185 45% 35% / 0.15);
+    --quiz-option-hover: 185 40% 96%;
+    --quiz-progress-bg: 185 25% 90%;
+    --quiz-progress-fill: 195 45% 25%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 195 40% 10%;
+    --foreground: 185 30% 95%;
+
+    --card: 195 35% 15%;
+    --card-foreground: 185 30% 95%;
+
+    --popover: 195 35% 15%;
+    --popover-foreground: 185 30% 95%;
+
+    --primary: 185 45% 50%;
+    --primary-foreground: 195 40% 10%;
+
+    --secondary: 195 30% 20%;
+    --secondary-foreground: 185 30% 95%;
+
+    --muted: 195 30% 20%;
+    --muted-foreground: 185 20% 60%;
+
+    --accent: 155 50% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 195 30% 25%;
+    --input: 195 30% 25%;
+    --ring: 185 45% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+@layer components {
+  .quiz-background {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--quiz-gradient-start)) 0%,
+      hsl(var(--quiz-gradient-end)) 50%,
+      hsl(185 35% 90%) 100%
+    );
+  }
+
+  .quiz-card {
+    @apply bg-card rounded-3xl;
+    box-shadow: var(--quiz-card-shadow);
+  }
+
+  .quiz-title {
+    font-family: 'Playfair Display', serif;
+    @apply text-primary;
+  }
+
+  .quiz-title-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+
+  .quiz-option {
+    @apply border border-border rounded-xl px-6 py-4 text-center cursor-pointer transition-all duration-200;
+  }
+
+  .quiz-option:hover {
+    @apply bg-secondary border-primary/30;
+    transform: translateY(-2px);
+  }
+
+  .quiz-option.selected {
+    @apply bg-secondary border-primary;
+  }
+
+  .quiz-question-pill {
+    @apply bg-secondary rounded-xl px-6 py-4 text-center;
+  }
+
+  .progress-segment {
+    @apply h-1 rounded-full transition-all duration-300;
+  }
+
+  .progress-segment.completed {
+    @apply bg-foreground;
+  }
+
+  .progress-segment.incomplete {
+    @apply bg-border;
+  }
+
+  .nav-button {
+    @apply w-10 h-10 rounded-lg border border-border flex items-center justify-center transition-all duration-200;
+  }
+
+  .nav-button:hover:not(:disabled) {
+    @apply bg-secondary border-primary/30;
+  }
+
+  .nav-button:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-sans {
+    font-family: 'Nunito', sans-serif;
+  }
+}
