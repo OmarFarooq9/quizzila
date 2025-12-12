@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+**Quizzila** 
+A modern, fully responsive quiz application built from scratch using React, TypeScript, and Tailwind CSS. The project focuses on clean UI/UX, smooth interactions, and structured, scalable code — making it both visually appealing and technically solid.
 
-## Project info
-
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+**Features**
+Interactive quiz flow with question navigation
+Dynamic score calculation
+Smooth UI transitions (Framer Motion optional)
+Custom gradient themes & animations
+Progress indicator for each question
+Responsive layout optimised for all screen sizes
+Clean component structure using TypeScript
+**Tech Stack**
+React + TypeScript
+Vite (fast development environment)
+Tailwind CSS for styling
+React Router (if used for navigation)
+Framer Motion for animations (optional)
+**Folder Structure**
+```
+src/
+ ├─ components/    # Reusable UI components
+ ├─ pages/         # Screens for quiz flow
+ ├─ data/          # Question & options data
+ ├─ styles/        # Global styles & Tailwind config
+ ├─ App.tsx        # Root component
+ └─ main.tsx       # Entry point
+```
+**Installation & Setup**
+Clone the repository:
+```
+gh repo clone OmarFarooq9/quizzila
+```
+Install dependencies:
+```
+npm install
+```
+Run the development server:
+```
 npm run dev
 ```
+Build for production:
+```
+npm run build
+```
+**Design**
+The UI is designed with:
 
-**Edit a file directly in GitHub**
+Smooth gradients
+Consistent spacing & typography
+Accessible color contrast
+Hover and tap feedback for options
+Everything is tailored to mimic modern UI patterns seen in real-world frontend assignments.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+**Purpose of the Project**
+This project was built to demonstrate:
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Ability to translate design into pixel-perfect UI
+Strong knowledge of React + TypeScript
+Tailwind CSS proficiency
+Component-driven architecture
+Clean, maintainable code
+Attention to detail in animations & usability
+📄 License
+This project is open-source and available under the MIT License.
